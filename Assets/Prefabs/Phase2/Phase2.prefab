@@ -49,4 +49,4 @@ MonoBehaviour:
   carPrefab: {fileID: 4187890154753911770, guid: aa7600a00b9b0719a91fc7c5a9ffe1a5, type: 3}
   objectivePrefab: {fileID: 8207068184008671608, guid: 97c3cba9578e8e2fba122300286af819, type: 3}
   completedPercent: 0.75
-  movementDelay: 0.6
+  movementDelay: 0.5
