@@ -30,6 +30,8 @@ public class Controller : MonoBehaviour
     float difficultyIncreaseRate = 0.5f;
     [SerializeField]
     UIController uiController;
+    [SerializeField]
+    AudioController audioController;
     void Start()
     {
         uiController.Initialize(this, UIController.State.Start);
@@ -129,5 +131,9 @@ public class Controller : MonoBehaviour
 
     public void IncreasePoints(int increaseBy) {
         pointCounter += increaseBy;
+    }
+
+    public void PlayEffect(AudioController.SoundEffect effect) {
+        audioController.PlayEffect(effect);
     }
 }
