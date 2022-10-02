@@ -98,10 +98,9 @@ public class Phase2 : MonoBehaviour, IPhase
                 controller.IncreasePoints(15);
                 currentCar = null;
                 controller.PlayEffect(AudioController.SoundEffect.Phase2Success);
-                Debug.Log(reachedObjective);
-                Debug.Log(carCount);
                 if (reachedObjective == carCount) {
-                    Instantiate(greenMask, transform.position, Quaternion.identity, transform);
+                    SpriteRenderer mask = Instantiate(greenMask, transform.position, Quaternion.identity, transform).GetComponent<SpriteRenderer>();
+                    mask.color = mask.color + new Color(0,0,0, 0.5f);
                 }
             }
             movementTime -= movementDelay;
