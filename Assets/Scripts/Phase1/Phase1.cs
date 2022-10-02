@@ -19,10 +19,12 @@ public class Phase1 : MonoBehaviour, IPhase
     [Range(0.1f, 0.99f)]
     float completedPercent = 0.8f;
 
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Color correctCol;
+    [SerializeField]
+    Color incorrectCol;
+    [SerializeField]
+    SpriteRenderer correctIncorrectCircle;
 
     Phase1Card lastClicked = null;
     float nextClickTime = 0;
@@ -54,7 +56,9 @@ public class Phase1 : MonoBehaviour, IPhase
                                     completed++;
                                     lastClicked = null;
                                     controller.PlayEffect(AudioController.SoundEffect.Phase1Correct);
+                                    StartCoroutine(CircleChange(timeDelay * 0.8f, correctCol));
                                 } else {
+                                    StartCoroutine(CircleChange(timeDelay * 0.8f, incorrectCol));
                                     StartCoroutine(unflip(timeDelay * 0.9f, lastClicked));
                                     StartCoroutine(unflip(timeDelay * 0.9f, card));
                                     nextClickTime = Time.time + timeDelay;
@@ -67,6 +71,13 @@ public class Phase1 : MonoBehaviour, IPhase
                 }
             }
         }
+    }
+
+    IEnumerator CircleChange(float delay, Color col) {
+        yield return new WaitForSeconds(delay * 0.2f);
+        correctIncorrectCircle.color = col;
+        yield return new WaitForSeconds(delay * 0.8f);
+        correctIncorrectCircle.color = new Color(0,0,0,0);
     }
 
     IEnumerator unflip(float delay, Phase1Card card) {
