@@ -24,6 +24,7 @@ public class Phase1 : MonoBehaviour, IPhase
     [SerializeField]
     Color incorrectCol;
     [SerializeField]
+    GameObject greenMask;
     SpriteRenderer correctIncorrectCircle;
 
     Phase1Card lastClicked = null;
@@ -95,6 +96,7 @@ public class Phase1 : MonoBehaviour, IPhase
         isCurrentPhase = true;
         generateCards(controller.currentDifficulty);
         DisplayCards();
+        correctIncorrectCircle = Instantiate(greenMask, transform.position, Quaternion.identity, transform).GetComponent<SpriteRenderer>();
     }
 
     public bool EndPhase() {
