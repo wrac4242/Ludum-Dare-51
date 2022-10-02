@@ -7,11 +7,19 @@ public class StartMenuController : MonoBehaviour, IUiController
 {
     bool isActive = false;
     UIController controller;
+    [SerializeField]
+    GameObject main;
+    [SerializeField]
+    GameObject tutorial;
+    [SerializeField]
+    GameObject credit;
     public void Activate(UIController contr) {
         Debug.Log("Start UI activated");
         controller = contr;
         gameObject.SetActive(true);
         isActive = true;
+
+        MainScreen();
     }
 	public void End() {
         isActive = false;
@@ -22,5 +30,23 @@ public class StartMenuController : MonoBehaviour, IUiController
         if (!isActive || controller == null) return;
         controller.StartGame();
         isActive = false;
+    }
+
+    public void TutorialScreen() {
+        main.SetActive(false);
+        tutorial.SetActive(true);
+        credit.SetActive(false);
+    }
+
+    public void CreditScreen() {
+        main.SetActive(false);
+        tutorial.SetActive(false);
+        credit.SetActive(true);
+    }
+
+    public void MainScreen() {
+        main.SetActive(true);
+        tutorial.SetActive(false);
+        credit.SetActive(false);
     }
 }
