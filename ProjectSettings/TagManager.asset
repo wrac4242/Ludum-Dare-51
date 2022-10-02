@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Grid
   - Car
+  - Card
+  - Objective
   layers:
   - Default
   - TransparentFX
@@ -45,4 +47,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Green
+    uniqueID: 1914970491
     locked: 0

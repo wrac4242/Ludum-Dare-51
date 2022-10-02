@@ -22,6 +22,8 @@ public class Phase2 : MonoBehaviour, IPhase
     [Range(0.1f, 0.99f)]
     float completedPercent = 0.8f;
     Phase2Car currentCar;
+    [SerializeField]
+    GameObject greenMask;
     public void StartPhase(Controller controllerIn) {
         Debug.Log("2 started");
         controller = controllerIn;
@@ -96,6 +98,11 @@ public class Phase2 : MonoBehaviour, IPhase
                 controller.IncreasePoints(15);
                 currentCar = null;
                 controller.PlayEffect(AudioController.SoundEffect.Phase2Success);
+                Debug.Log(reachedObjective);
+                Debug.Log(carCount);
+                if (reachedObjective == carCount) {
+                    Instantiate(greenMask, transform.position, Quaternion.identity, transform);
+                }
             }
             movementTime -= movementDelay;
         }
@@ -106,7 +113,7 @@ public class Phase2 : MonoBehaviour, IPhase
         for (int i = 0; i < spawnCount; i++)
         {
             carCount++;
-            Color col = new Color(((i+0.25f) * 3 / spawnCount)%1f, i / spawnCount, ((i + 0.3f) * 2 / spawnCount )%2f);
+            Color col = new Color(((i+0.25f) * 3 / spawnCount)%1f, i + 0.1f / spawnCount, ((i + 0.5f) * 2 / spawnCount )%1f);
             bool placing = true;
             Vector3 intendedPos = Vector3.zero;
             while (placing) {

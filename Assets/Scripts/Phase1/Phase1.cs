@@ -113,11 +113,11 @@ public class Phase1 : MonoBehaviour, IPhase
         cardList = new List<GameObject>();
         
         // difficulty is amount of pairs
-        int cardCount = Mathf.RoundToInt(Mathf.Min(difficulty*cardMultiplier, 3));
-        for (int i = 0; i < cardCount; i++)
+        int spawnCount = Mathf.RoundToInt(Mathf.Min(difficulty*cardMultiplier, 3));
+        for (int i = 0; i < spawnCount; i++)
         {
             // i is type count
-            Color col = new Color(((i+0.25f) * 3 / cardCount)%1f, i / cardCount, ((i + 0.3f) * 2 / cardCount )%2f);
+            Color col = new Color(((i+0.25f) * 3 / spawnCount)%1f, i + 0.1f / spawnCount, ((i + 0.5f) * 2 / spawnCount )%1f);
 
             GameObject card = Instantiate(cardInstance, transform);
             card.GetComponent<Phase1Card>().Initialize(i, this, col);

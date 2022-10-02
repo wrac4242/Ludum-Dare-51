@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCol: {r: 1, g: 0, b: 0.9183836, a: 1}
-  completedCol: {r: 0.254717, g: 0.14057495, b: 0.14057495, a: 1}
+  completedCol: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
   normalCol: {r: 1, g: 1, b: 1, a: 0}
   id: 0
 --- !u!61 &1757762031142010932

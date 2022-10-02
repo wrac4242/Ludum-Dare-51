@@ -48,5 +48,6 @@ MonoBehaviour:
   greyGridPrefab: {fileID: 6718682238765697079, guid: 46c315da189a8a97385851956343dcee, type: 3}
   carPrefab: {fileID: 4187890154753911770, guid: aa7600a00b9b0719a91fc7c5a9ffe1a5, type: 3}
   objectivePrefab: {fileID: 8207068184008671608, guid: 97c3cba9578e8e2fba122300286af819, type: 3}
-  completedPercent: 0.75
-  movementDelay: 0.5
+  completedPercent: 0.65
+  greenMask: {fileID: 2167943889072828604, guid: 6835957c0268d4d51beadbe4dcc0a68f, type: 3}
+  movementDelay: 0.6
