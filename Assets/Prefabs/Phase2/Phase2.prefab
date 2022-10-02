@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4988febb5197ab28fe56c05188aefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultyMultiplier: 0.5
+  difficultyMultiplier: 0.75
   greyGridPrefab: {fileID: 6718682238765697079, guid: 46c315da189a8a97385851956343dcee, type: 3}
   carPrefab: {fileID: 4187890154753911770, guid: aa7600a00b9b0719a91fc7c5a9ffe1a5, type: 3}
   objectivePrefab: {fileID: 8207068184008671608, guid: 97c3cba9578e8e2fba122300286af819, type: 3}
-  completedPercent: 0.8
-  movementDelay: 0.8
+  completedPercent: 0.75
+  movementDelay: 0.6

@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phase3Grid: {fileID: 8082783560822450685, guid: 5e1051e89484da681a4a6648b76692b9, type: 3}
   playerPrefab: {fileID: 2018865960805178171, guid: 3eddc8de047ab8357833b168c5622c77, type: 3}
-  startingPointDelay: 1
+  startingPointDelay: 1.2

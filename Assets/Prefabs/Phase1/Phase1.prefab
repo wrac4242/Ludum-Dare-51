@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardInstance: {fileID: 4636754953386527017, guid: 0a9019765ce6034009b4d823aadaec49, type: 3}
   cardMultiplier: 2
-  timeDelay: 1
-  completedPercent: 0.9
+  timeDelay: 0.7
+  completedPercent: 0.75
