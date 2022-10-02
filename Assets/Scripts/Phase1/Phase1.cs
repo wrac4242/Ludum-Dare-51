@@ -117,7 +117,7 @@ public class Phase1 : MonoBehaviour, IPhase
         for (int i = 0; i < cardCount; i++)
         {
             // i is type count
-            Color col = new Color((i * 3 / cardCount + Random.Range(0f, 0.2f))%1f, (i / cardCount + Random.Range(0f, 0.2f))%1f, (i * 2 / cardCount + Random.Range(0f, 0.2f))%1f);
+            Color col = new Color(((i+0.25f) * 3 / cardCount)%1f, i / cardCount, ((i + 0.3f) * 2 / cardCount )%2f);
 
             GameObject card = Instantiate(cardInstance, transform);
             card.GetComponent<Phase1Card>().Initialize(i, this, col);

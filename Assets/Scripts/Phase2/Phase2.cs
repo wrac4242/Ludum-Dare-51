@@ -106,7 +106,7 @@ public class Phase2 : MonoBehaviour, IPhase
         for (int i = 0; i < spawnCount; i++)
         {
             carCount++;
-            Color col = new Color((i * 3 / spawnCount + Random.Range(0f, 0.2f))%3f, (i / spawnCount + Random.Range(0f, 0.2f))%1f, (i * 2 / spawnCount + Random.Range(0f, 0.2f))%2f);
+            Color col = new Color(((i+0.25f) * 3 / spawnCount)%1f, i / spawnCount, ((i + 0.3f) * 2 / spawnCount )%2f);
             bool placing = true;
             Vector3 intendedPos = Vector3.zero;
             while (placing) {
