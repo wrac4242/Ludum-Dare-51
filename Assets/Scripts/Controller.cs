@@ -53,6 +53,7 @@ public class Controller : MonoBehaviour
             currentPhase = phase3;
         }
         currentPhase.StartPhase(this);
+        PlayEffect(AudioController.SoundEffect.GameStart);
     }
 
     // Update is called once per frame
@@ -123,9 +124,11 @@ public class Controller : MonoBehaviour
             }
             uiController.setPoints(pointCounter);
             uiController.SetState(UIController.State.GameOver);
+            PlayEffect(AudioController.SoundEffect.GameOver);
 
             return true;
         } 
+        PlayEffect(AudioController.SoundEffect.NextPhase);
         return false;
     }
 

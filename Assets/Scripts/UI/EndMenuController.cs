@@ -41,5 +41,6 @@ public class EndMenuController : MonoBehaviour, IUiController
     public void StartMenu() {
         if (!isActive || controller == null) return;
         controller.SetState(UIController.State.Start);
+        controller.controller.PlayEffect(AudioController.SoundEffect.ButtonClick);
     }
 }

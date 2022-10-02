@@ -2108,9 +2108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83411de01d9927fc59c3353443df9771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
-  tutorial: {fileID: 0}
-  credit: {fileID: 0}
+  main: {fileID: 1005341240}
+  tutorial: {fileID: 16568749}
+  credit: {fileID: 1620107505}
 --- !u!1 &1105927200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +2748,7 @@ MonoBehaviour:
   StartMenu: {fileID: 1091504224}
   PlayingMenu: {fileID: 403222843}
   EndMenu: {fileID: 1105927200}
+  controller: {fileID: 0}
 --- !u!1 &1737241285
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3371,7 @@ MonoBehaviour:
   gameOver: {fileID: 8300000, guid: 57dfe685fd6b8964c9be479512bd7ffe, type: 3}
   gameStart: {fileID: 8300000, guid: ff61d50c56e60f34c85462dbadfa95ce, type: 3}
   buttonClick: {fileID: 8300000, guid: a42dc170f00d86856b6124f0d96e109b, type: 3}
+  nextPhase: {fileID: 8300000, guid: 1eb76a2a2743be42a89239a0932ce44b, type: 3}
   volume: 0.5
 --- !u!1 &1923182307
 GameObject:

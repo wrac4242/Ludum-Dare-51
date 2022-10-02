@@ -95,6 +95,7 @@ public class Phase2 : MonoBehaviour, IPhase
                 reachedObjective++;
                 controller.IncreasePoints(15);
                 currentCar = null;
+                controller.PlayEffect(AudioController.SoundEffect.Phase2Success);
             }
             movementTime -= movementDelay;
         }

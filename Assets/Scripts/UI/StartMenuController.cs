@@ -33,18 +33,21 @@ public class StartMenuController : MonoBehaviour, IUiController
     }
 
     public void TutorialScreen() {
+        controller.controller.PlayEffect(AudioController.SoundEffect.ButtonClick);
         main.SetActive(false);
         tutorial.SetActive(true);
         credit.SetActive(false);
     }
 
     public void CreditScreen() {
+        controller.controller.PlayEffect(AudioController.SoundEffect.ButtonClick);
         main.SetActive(false);
         tutorial.SetActive(false);
         credit.SetActive(true);
     }
 
     public void MainScreen() {
+        controller.controller.PlayEffect(AudioController.SoundEffect.ButtonClick);
         main.SetActive(true);
         tutorial.SetActive(false);
         credit.SetActive(false);

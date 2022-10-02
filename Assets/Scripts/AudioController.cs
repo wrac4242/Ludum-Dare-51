@@ -11,7 +11,8 @@ public class AudioController : MonoBehaviour
         Phase2Success,
         GameOver,
         GameStart,
-        ButtonClick
+        ButtonClick,
+        NextPhase
     }
     AudioSource audioOut;
 
@@ -27,6 +28,8 @@ public class AudioController : MonoBehaviour
     AudioClip gameStart;
     [SerializeField]
     AudioClip buttonClick;
+    [SerializeField]
+    AudioClip nextPhase;
     
     [Range(0f, 1f)]
     [SerializeField]
@@ -59,6 +62,9 @@ public class AudioController : MonoBehaviour
                 break;
             case SoundEffect.ButtonClick:
                 toPlay = buttonClick;
+                break;
+            case SoundEffect.NextPhase:
+                toPlay = nextPhase;
                 break;
         }
 

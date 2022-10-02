@@ -24,7 +24,7 @@ public class UIController : MonoBehaviour
     PlayingMenuController playingMenuController;
     EndMenuController endMenuController;
 
-    Controller controller;
+    public Controller controller;
 
     public void Initialize(Controller contr, State sta) {
         controller = contr;

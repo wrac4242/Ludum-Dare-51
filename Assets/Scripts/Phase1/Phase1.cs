@@ -53,11 +53,13 @@ public class Phase1 : MonoBehaviour, IPhase
                                     controller.IncreasePoints(10);
                                     completed++;
                                     lastClicked = null;
+                                    controller.PlayEffect(AudioController.SoundEffect.Phase1Correct);
                                 } else {
                                     StartCoroutine(unflip(timeDelay * 0.9f, lastClicked));
                                     StartCoroutine(unflip(timeDelay * 0.9f, card));
                                     nextClickTime = Time.time + timeDelay;
                                     lastClicked = null;
+                                    controller.PlayEffect(AudioController.SoundEffect.Phase1Incorrect);
                                 }
                             }
                         }
