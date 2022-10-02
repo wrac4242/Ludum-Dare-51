@@ -15,13 +15,13 @@ public class Phase1Card : MonoBehaviour
     Color flippedCol;
     Color normalCol;
 
-    public void Initialize(int typeIn, Phase1 controller) {
+    public void Initialize(int typeIn, Phase1 controller, Color col) {
         type = typeIn;
 
         renderer = GetComponent<SpriteRenderer>();
 
         // set colour
-        normalCol = new Color(type * 30/ 255f, type * 10/ 255f, type * 20/ 255f, 1f);
+        normalCol = col;
         renderer.color = flippedCol;
     }
 

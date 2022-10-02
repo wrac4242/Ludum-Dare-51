@@ -13,6 +13,8 @@ public class StartMenuController : MonoBehaviour, IUiController
     GameObject tutorial;
     [SerializeField]
     GameObject credit;
+    [SerializeField]
+    GameObject exit;
     public void Activate(UIController contr) {
         Debug.Log("Start UI activated");
         controller = contr;
@@ -51,5 +53,9 @@ public class StartMenuController : MonoBehaviour, IUiController
         main.SetActive(true);
         tutorial.SetActive(false);
         credit.SetActive(false);
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 }

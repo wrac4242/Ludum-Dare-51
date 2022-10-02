@@ -102,10 +102,11 @@ public class Phase2 : MonoBehaviour, IPhase
     }
 
     void SpawnCarsAndObjectives(float difficulty) {
-        for (int i = 0; i < Mathf.Min(difficulty*difficultyMultiplier, xSize * ySize -1); i++)
+        int spawnCount = Mathf.RoundToInt(Mathf.Min(difficulty*difficultyMultiplier, xSize * ySize -1));
+        for (int i = 0; i < spawnCount; i++)
         {
             carCount++;
-            Color col = new Color(Random.Range(0f,1f), Random.Range(0f,1f), Random.Range(0f,1f), 1f);
+            Color col = new Color((i * 3 / spawnCount + Random.Range(0f, 0.2f))%3f, (i / spawnCount + Random.Range(0f, 0.2f))%1f, (i * 2 / spawnCount + Random.Range(0f, 0.2f))%2f);
             bool placing = true;
             Vector3 intendedPos = Vector3.zero;
             while (placing) {

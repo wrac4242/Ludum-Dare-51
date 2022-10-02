@@ -100,14 +100,17 @@ public class Phase1 : MonoBehaviour, IPhase
         cardList = new List<GameObject>();
         
         // difficulty is amount of pairs
-        for (int i = 0; i < Mathf.Min(difficulty*cardMultiplier, 3); i++)
+        int cardCount = Mathf.RoundToInt(Mathf.Min(difficulty*cardMultiplier, 3));
+        for (int i = 0; i < cardCount; i++)
         {
             // i is type count
+            Color col = new Color((i * 3 / cardCount + Random.Range(0f, 0.2f))%1f, (i / cardCount + Random.Range(0f, 0.2f))%1f, (i * 2 / cardCount + Random.Range(0f, 0.2f))%1f);
+
             GameObject card = Instantiate(cardInstance, transform);
-            card.GetComponent<Phase1Card>().Initialize(i, this);
+            card.GetComponent<Phase1Card>().Initialize(i, this, col);
             cardList.Add(card);
             GameObject card2 = Instantiate(cardInstance, transform);
-            card2.GetComponent<Phase1Card>().Initialize(i, this);
+            card2.GetComponent<Phase1Card>().Initialize(i, this, col);
             cardList.Add(card2);
         }
 
