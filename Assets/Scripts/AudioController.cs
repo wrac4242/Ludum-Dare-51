@@ -35,12 +35,8 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     float volume = 0.5f;
 
-    void Start()
-    {
-        audioOut = gameObject.GetComponent<AudioSource>();
-    }
-
     public void PlayEffect(SoundEffect effect) {
+        if (audioOut == null) audioOut = gameObject.GetComponent<AudioSource>();
         AudioClip toPlay = null;
 
         switch (effect)
